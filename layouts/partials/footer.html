@@ -60,6 +60,19 @@
         <!-- /.col-md-4 -->
         {{ end }}
 
+        {{ if isset .Site.Params "social_media" }}
+            <div class="col-md-4 col-sm-6">
+
+              <h4>Social Media</h4>
+
+                {{ range .Site.Params.social_media }}
+                    <a href="{{ .url }}">{{ .name }}</a> <br>
+                {{end}}
+
+            </div>
+        {{ end }}
+        <!-- /.col-md-4 -->
+
     </div>
     <!-- /.container -->
 </footer>
